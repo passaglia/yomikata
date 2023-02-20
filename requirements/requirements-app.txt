@@ -1,0 +1,8 @@
+streamlit==1.17.0
+spacy
+fugashi==1.2.1
+ipadic==1.0.0
+jumandic==1.0.0
+fugashi[unidic] #python -m unidic download
+sudachidict_full
+unidic-lite

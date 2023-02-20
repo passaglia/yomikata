@@ -1,0 +1,11 @@
+numpy>=1.24.0
+pandas>=1.5.2
+jaconv==0.3
+scikit-learn==1.2.0
+speach==0.1a15.post1
+torch==1.13.1
+transformers>=4.25.1
+datasets==2.7.1
+pynvml==11.4.1
+sentencepiece==0.1.97
+rich>=12.6.0

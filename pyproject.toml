@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yomikata"
+version = "0.0.1"
+authors = [{name="Sam Passaglia"}]
+description = "Japanese kanji disambiguation"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License:: OSI Approved :: MIT License"
+]
+dynamic = ["dependencies"]
+
+[project.urls]
+"Homepage" = "https://github.com/passaglia/yomikata"
+"Demo" = "https://huggingface.co/spaces/passaglia/yomikata"
+"Bug Tracker" = "https://github.com/passaglia/yomikata/issues"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["./requirements/requirements-inference.txt","./requirements/requirements-dev.txt","./requirements/requirements-app.txt"]}
+
+[tool.setuptools]
+packages = ["yomikata", "yomikata.config", "yomikata.download"]
+
+[tool.flake8]
+exclude = "venv"
+ignore = ["E203","E501", "W503", "E226"]
+max-line-length = 79
+# E501: Line too long
+# W503: Line break occurred before binary operator
+# E226: Missing white space around arithmetic operator
+# E203: whitespace before ':' ()
+
+# iSort
+[tool.isort]
+profile = "black"
+line_length = 79
+multi_line_output = 3
+include_trailing_comma = true
+virtual_env = "venv"
+
+# Black formatting
+[tool.black]
+line-length = 100
+include = '\.pyi?$'
+exclude = '''
+    /(
+      .eggs         # exclude a few common directories
+    | .git          # in the root of the project
+    | .hg
+    | .mypy_cache
+    | .tox
+    | venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  '''
+
