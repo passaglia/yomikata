@@ -7,6 +7,7 @@ help:
     @echo "venv    : creates a virtual environment."
     @echo "style   : executes style formatting."
     @echo "app     : runs the streamlit app."
+    @echo "build   : builds the package."
 
 # Styling
 .PHONY: style
@@ -30,4 +31,4 @@ app:
 
 # Build
 build:
-    python3 -m build
+	python3 -m build

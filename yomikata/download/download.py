@@ -17,16 +17,18 @@ The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 """
 
-import requests
-import shutil
-import tarfile
 import os
+import shutil
 import sys
-from yomikata.config import logger
-from urllib.request import urlretrieve
-from tqdm import tqdm
+import tarfile
 from pathlib import Path
-from yomikata.config import config
+from urllib.request import urlretrieve
+
+import requests
+from tqdm import tqdm
+
+from yomikata.config import config, logger
+
 
 # This is used to show progress when downloading.
 # see here: https://github.com/tqdm/tqdm#hooks-and-callbacks
