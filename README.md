@@ -34,7 +34,7 @@ Without **Yomikata**, the dictionary outputs the wrong reading for the heteronym
 
 # Installation 
 
-Inferrence should work fine on CPU.
+Inference should work fine on CPU.
 
 For details on data processing and training, see the [main notebook](https://github.com/passaglia/yomikata/tree/main/notebooks).
 

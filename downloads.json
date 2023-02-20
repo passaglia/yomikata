@@ -1,10 +1,10 @@
 {
     "latest": {
-        "url": "",
+        "url": "https://github.com/passaglia/yomikata/releases/download/0.0.1-alpha/dbert-artifacts.tar.gz",
         "version": "0.0.1"
     },
     "0.0.1": {
-        "url": "",
+        "url": "https://github.com/passaglia/yomikata/releases/download/0.0.1-alpha/dbert-artifacts.tar.gz",
         "version": "0.0.1"
     }
 }
