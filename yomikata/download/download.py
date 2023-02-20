@@ -97,11 +97,6 @@ def download_and_clean(version, url):
     if os.path.isdir(dbertdir):
         shutil.rmtree(dbertdir)
 
-    # save a version file so we can tell what it is
-    vpath = os.path.join(dbertdir, "version")
-    with open(vpath, "w") as vfile:
-        vfile.write("unidic-{}".format(version))
-
     print("Downloaded dbert v{} to {}".format(version, dbertdir), file=sys.stderr)
 
 
