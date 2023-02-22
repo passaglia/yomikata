@@ -21,9 +21,11 @@ The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 """
 if __name__ == "__main__":
-    from yomikata.download.download import download_version
-    import plac
     import sys
+
+    import plac
+
+    from yomikata.download.download import download_version
 
     commands = {
         "download": download_version,

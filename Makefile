@@ -32,3 +32,9 @@ app:
 # Build
 build:
 	python3 -m build
+
+# Pypi
+pypi:
+	python3 -m twine upload dist/* --verbose
+	# username: __token__ password: api key from pypi
+	
