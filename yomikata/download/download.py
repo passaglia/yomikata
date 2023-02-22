@@ -91,13 +91,13 @@ def download_and_clean(version, url):
     download_progress(url, fname)
     print("Finished download.")
 
-    with tarfile.open(fname, "r") as tf:
-        tf.extractall(cdir)
-    os.remove(fname)
-
     dbertdir = os.path.join(cdir, "dbert-artifacts")
     if os.path.isdir(dbertdir):
         shutil.rmtree(dbertdir)
+
+    with tarfile.open(fname, "r") as tf:
+        tf.extractall(cdir)
+    os.remove(fname)
 
     print("Downloaded dbert v{} to {}".format(version, dbertdir), file=sys.stderr)
 
