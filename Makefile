@@ -8,6 +8,7 @@ help:
     @echo "style   : executes style formatting."
     @echo "app     : runs the streamlit app."
     @echo "build   : builds the package."
+    @echo "pypi    : uploads the package to pypi."
 
 # Styling
 .PHONY: style
