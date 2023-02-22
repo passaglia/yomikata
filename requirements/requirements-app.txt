@@ -3,6 +3,6 @@ spacy
 fugashi==1.2.1
 ipadic==1.0.0
 jumandic==1.0.0
-fugashi[unidic] #python -m unidic download
+fugashi[unidic-lite]
 sudachidict_full
 unidic-lite
