@@ -4,10 +4,9 @@ Flake8-pyproject
 isort
 mlflow-skinny==2.1.1
 pretty-errors==1.2.25
-fugashi==1.2.1
 ipadic==1.0.0
 jumandic==1.0.0
-fugashi[unidic] #python -m unidic download
-sudachidict_full
 unidic-lite
+fugashi[unidic-lite] #python -m unidic download
+sudachidict_full
 build
