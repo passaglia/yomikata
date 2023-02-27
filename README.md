@@ -1,6 +1,6 @@
 # yomikata
 
-<img src="robot_reading.png" width=125 height=125 alt="A robot reading a book" />
+<img src="https://github.com/passaglia/yomikata/blob/main/robot_reading.png" width=125 height=125 alt="A robot reading a book" />
 
 **Yomikata** uses context to resolve ambiguous words in Japanese. Check out the [**interactive demo**](https://huggingface.co/spaces/passaglia/yomikata-demo)!
 
@@ -34,7 +34,11 @@ Without **Yomikata**, the dictionary outputs the wrong reading for the heteronym
 
 # Installation 
 
-Installation instructions coming soon!
+```python
+pip install yomikata
+python -m yomikata download
+```
+The second command is necessary to download the model weights, which are too large to host PyPI.
 
 Inference should work fine on CPU.
 

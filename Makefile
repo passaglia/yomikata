@@ -36,6 +36,7 @@ build:
 
 # Pypi
 pypi:
+	pip install twine
 	python3 -m twine upload dist/* --verbose
 	# username: __token__ password: api key from pypi
 	
