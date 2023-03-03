@@ -6,7 +6,7 @@
 
 **Yomikata** supports 130 ambiguous forms and reaches a global accuracy of 94%. See the demo page for detailed performance information.
 
-**Yomikata** follows the approach of [Sato et al. 2022](https://aclanthology.org/2022.lrec-1.770/) by fine-tuning the Tohoku group's [Japanese BERT transformer](https://github.com/cl-tohoku/bert-japanese) to classify words into different readings based on the sentence context. A similar approach was used in English by [Nicolis et al. 2021](https://www.amazon.science/publications/homograph-disambiguation-with-contextual-word-embeddings-for-tts-systems]).
+**Yomikata** follows the approach of [Sato et al. 2022](https://aclanthology.org/2022.lrec-1.770/) by fine-tuning the Tohoku group's [Japanese BERT transformer](https://github.com/cl-tohoku/bert-japanese) to classify words into different readings based on the sentence context. A similar approach was used in English by [Nicolis et al. 2021](https://www.amazon.science/publications/homograph-disambiguation-with-contextual-word-embeddings-for-tts-systems).
 
 **Yomikata** recognizes ~50% more heteronyms than Sato et al. by adding support for words which are not in the original BERT vocabulary, and it expands the original [Aozora Bunko](https://github.com/ndl-lab/huriganacorpus-aozora) and [NDL titles](https://github.com/ndl-lab/huriganacorpus-ndlbib) training data to include the [core BCCWJ corpus](https://clrd.ninjal.ac.jp/bccwj/) and the [KWDLC corpus](https://github.com/ku-nlp/KWDLC). 
 
