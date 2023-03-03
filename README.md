@@ -38,7 +38,7 @@ Without **Yomikata**, the dictionary outputs the wrong reading for the heteronym
 pip install yomikata
 python -m yomikata download
 ```
-The second command is necessary to download the model weights, which are too large to host PyPI.
+The second command is necessary to download the model weights, which at ~400MB are too large to host on PyPI.
 
 Inference should work fine on CPU.
 
