@@ -19,7 +19,7 @@ reader.furigana('そして、畳の表は、すでに幾年前に換えられた
 # => そして、畳の{表/おもて}は、すでに幾年前に換えられたのか分らなかった。
 ```
 
-This example sentence, from the short story *When I Was looking for a Room to Let* (1923) by Mimei Ogawa, contains the very common heteronym 表, which admits the readings *omote* (surface) and *hyō* (table). **Yomikata**'s dBert (disambiguation BERT) correctly determines that in this sentence it refers to the surface of a tatami mat and should be read *omote*.
+This example sentence, from the short story *When I Was Looking for a Room to Let* (1923) by Mimei Ogawa, contains the very common heteronym 表, which admits the readings *omote* (surface) and *hyō* (table). **Yomikata**'s dBert (disambiguation BERT) correctly determines that in this sentence it refers to the surface of a tatami mat and should be read *omote*.
 
 The furigana function outputs the sentence with the heteronym annotated. Readings for the other words can be obtained with a simple dictionary lookup.
 
