@@ -19,7 +19,7 @@ reader.furigana('そして、畳の表は、すでに幾年前に換えられた
 # => そして、畳の{表/おもて}は、すでに幾年前に換えられたのか分らなかった。
 ```
 
-This example sentence, from the short story *When I Was Looking for a Room to Let* (1923) by Mimei Ogawa, contains the very common heteronym 表, which admits the readings *omote* (surface) and *hyō* (table). **Yomikata**'s dBert (disambiguation BERT) correctly determines that in this sentence it refers to the surface of a tatami mat and should be read *omote*.
+This example sentence contains the very common heteronym 表, which admits the readings *omote* (surface) and *hyō* (table). **Yomikata**'s dBert (disambiguation BERT) correctly determines that in this sentence it refers to the surface of a tatami mat and should be read *omote*. 
 
 The furigana function outputs the sentence with the heteronym annotated. Readings for the other words can be obtained with a simple dictionary lookup.
 
@@ -32,6 +32,8 @@ dictreader.furigana("そして、畳の{表/おもて}は、すでに幾年前�
 
 Without **Yomikata**, the dictionary outputs the wrong reading for the heteronym.
 
+This example sentence is from the short story *When I Was Looking for a Room to Let* (1923) by Mimei Ogawa.
+
 # Installation 
 
 ```python
@@ -43,6 +45,9 @@ The second command is necessary to download the model weights, which at ~400MB a
 Inference should work fine on CPU.
 
 For details on data processing and training, see the [main notebook](https://github.com/passaglia/yomikata/tree/main/notebooks).
+
+Note: yomikata's dictionary module depends on `fugashi`, which cannot yet be pip installed on M1 Macs. You get around this by installing fugashi directly from source. If you don't need the dictionary module, you can also just install yomikata from source without fugashi.
+
 
 
 
