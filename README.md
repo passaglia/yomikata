@@ -46,7 +46,7 @@ Inference should work fine on CPU.
 
 For details on data processing and training, see the [main notebook](https://github.com/passaglia/yomikata/tree/main/notebooks).
 
-Note: yomikata's dictionary module depends on `fugashi`, which cannot yet be pip installed on M1 Macs. You get around this by installing fugashi directly from source. If you don't need the dictionary module, you can also just install yomikata from source without fugashi.
+Note: yomikata's dictionary module depends on `fugashi`, which cannot yet be pip installed on M1 Macs. Youcan get around this by installing fugashi directly from source. If you don't need the dictionary module, you can also just install yomikata from source without fugashi.
 
 
 
