@@ -1,5 +1,6 @@
 """sudachi.py
-Data processing script for sudachi dictionary
+Data processing script for sudachi dictionary csv files
+Download: http://sudachi.s3-website-ap-northeast-1.amazonaws.com/sudachidict-raw/
 """
 
 import warnings

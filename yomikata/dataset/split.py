@@ -130,13 +130,9 @@ def regroup_furigana_tokens(ruby_tokens, heteronym, reading, verbose=False):
         [token.furi for token in regrouped_tokens]
     ):
         if verbose:
-            print(
-                "regroup failed, reading of produced result does not agree with reading of input"
-            )
+            print("regroup failed, reading of produced result does not agree with reading of input")
         return ruby_tokens
-    if not [token.furi for token in regrouped_tokens if token.text == heteronym] == [
-        reading
-    ]:
+    if not [token.furi for token in regrouped_tokens if token.text == heteronym] == [reading]:
         if verbose:
             print("regroup failed, the heteronym did not get assigned the reading")
         return ruby_tokens
@@ -167,9 +163,7 @@ def remove_other_readings(input_file, output_file, heteronym_dict):
         logger.info(heteronym)
         n_with_het = sum(df["sentence"].str.contains(heteronym))
         keep_for_het = df["furigana"].str.contains(
-            r"|".join(
-                [f"{{{heteronym}/{reading}}}" for reading in heteronym_dict[heteronym]]
-            )
+            r"|".join([f"{{{heteronym}/{reading}}}" for reading in heteronym_dict[heteronym]])
         )
         df["keep_row"] = df["keep_row"] | keep_for_het
         logger.info(
@@ -184,9 +178,7 @@ def check_data(input_file) -> bool:
     df = pd.read_csv(input_file)  # load
     df["furigana-test"] = df["sentence"] == df["furigana"].apply(utils.remove_furigana)
     assert df["furigana-test"].all()
-    df["sentence-standardize-test"] = df["sentence"] == df["sentence"].apply(
-        utils.standardize_text
-    )
+    df["sentence-standardize-test"] = df["sentence"] == df["sentence"].apply(utils.standardize_text)
     assert df["sentence-standardize-test"].all()
 
     return True
@@ -257,9 +249,7 @@ if __name__ == "__main__":
     )
 
     logger.info("Running checks on data")
-    test_result = check_data(
-        Path(config.SENTENCE_DATA_DIR, "optimized_strict_heteronyms.csv")
-    )
+    test_result = check_data(Path(config.SENTENCE_DATA_DIR, "optimized_strict_heteronyms.csv"))
 
     logger.info("Performing train/test/split")
     split_data(Path(config.SENTENCE_DATA_DIR, "optimized_strict_heteronyms.csv"))
