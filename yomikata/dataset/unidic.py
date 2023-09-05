@@ -1,5 +1,6 @@
 """unidic.py
-Data processing script for unidic dictionary
+Data processing script for unidic dictionary 
+Download: lex.csv from the full download https://clrd.ninjal.ac.jp/unidic/download.html)
 """
 
 import warnings
