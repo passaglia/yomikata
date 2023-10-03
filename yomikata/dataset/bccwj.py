@@ -25,6 +25,7 @@ from pathlib import Path
 import jaconv
 import pandas as pd
 from speach.ttlig import RubyToken
+from tqdm import tqdm
 
 from yomikata import utils
 from yomikata.config import config, logger
@@ -137,8 +138,11 @@ def read_bccwj_file(filename: str):
         return sub_df
 
     output_df = pd.DataFrame()
-    for i, row in df.iterrows():
-        output_df = output_df.append(get_sentences(row))
+    for i, row in tqdm(df.iterrows()):
+        try:
+            output_df = pd.concat([output_df, get_sentences(row)])
+        except AttributeError:
+            continue
 
     return output_df
 
